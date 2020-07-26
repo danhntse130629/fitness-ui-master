@@ -716,7 +716,7 @@ class DishesDetail extends StatelessWidget {
                 ),
               ]),
           child: Text(
-            'Add to tracker',
+            'Eaten',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 22.0,

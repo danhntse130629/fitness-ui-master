@@ -11,38 +11,56 @@ class Diet extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.0),
       child: SafeArea(
         child: DefaultTabController(
-          length: 4,
+          length: 7,
           child: Scaffold(
             appBar: AppBar(
               elevation: 0,
               backgroundColor: Colors.white,
               flexibleSpace: Header(
-                'Diet',
+                'This week\'s menu',
               ),
               bottom: TabBar(
                 tabs: <Widget>[
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Breakfast',
+                      text: 'Mo',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Lunch',
+                      text: 'Tu',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Dinner',
+                      text: 'We',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: 'Snacks',
+                      text: 'Th',
+                    ),
+                  ),
+                  Container(
+                    height: 30.0,
+                    child: Tab(
+                      text: 'Fr',
+                    ),
+                  ),
+                  Container(
+                    height: 30.0,
+                    child: Tab(
+                      text: 'Sa',
+                    ),
+                  ),
+                  Container(
+                    height: 30.0,
+                    child: Tab(
+                      text: 'Su',
                     ),
                   ),
                 ],
@@ -57,6 +75,15 @@ class Diet extends StatelessWidget {
               children: <Widget>[
                 TabViewBase(
                   tabName: 'Breakfast',
+                ),
+                TabViewBase(
+                  tabName: 'Lunch',
+                ),
+                TabViewBase(
+                  tabName: 'Dinner',
+                ),
+                TabViewBase(
+                  tabName: 'Snacks',
                 ),
                 TabViewBase(
                   tabName: 'Lunch',

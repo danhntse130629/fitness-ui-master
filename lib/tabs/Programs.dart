@@ -158,29 +158,29 @@ final List<Exercise> exercises2 = [
                   title: 'Muscle growth',
                   horizontalList: this.generateList2(context),
                 ),
-                Section(
-                  title: 'Workout Plan',
-                  horizontalList: <Widget>[
-                    Container(
-                      child: ImageCardWithInternal(
-                        image: 'assets/images/plan3.jpg',
-                        title: '3 days \nWeek',
-                        duration: '',
-                      ),
-                    ),
-      
-                    ImageCardWithInternal(
-                      image: 'assets/images/plan4.jpg',
-                      title: 'Core \nWorkout',
-                      duration: '',
-                    ),
-                    ImageCardWithInternal(
-                      image: 'assets/images/image004.jpg',
-                      title: 'Core \nWorkout',
-                      duration: '',
-                    ),
-                  ],
-                ),
+//                Section(
+//                  title: 'Workout Plan',
+//                  horizontalList: <Widget>[
+//                    Container(
+//                      child: ImageCardWithInternal(
+//                        image: 'assets/images/plan3.jpg',
+//                        title: '3 days \nWeek',
+//                        duration: '',
+//                      ),
+//                    ),
+//
+//                    ImageCardWithInternal(
+//                      image: 'assets/images/plan4.jpg',
+//                      title: 'Core \nWorkout',
+//                      duration: '',
+//                    ),
+//                    ImageCardWithInternal(
+//                      image: 'assets/images/image004.jpg',
+//                      title: 'Core \nWorkout',
+//                      duration: '',
+//                    ),
+//                  ],
+//                ),
               ],
             ),
           ),

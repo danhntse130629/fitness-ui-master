@@ -14,8 +14,8 @@ class Tabs extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             Profile(),
-            Programs(),
             Diet(),
+            Programs(),
             Results(),
           ],
         ),
@@ -25,10 +25,10 @@ class Tabs extends StatelessWidget {
               icon: Icon(Icons.person, size: 26.0,),
             ),
             Tab(
-              icon: Icon(Icons.explicit, size: 26.0),
+              icon: Icon(Icons.restaurant_menu, size: 26.0),
             ),
             Tab(
-              icon: Icon(Icons.restaurant_menu, size: 26.0),
+              icon: Icon(Icons.explicit, size: 26.0),
             ),
             Tab(
               icon: Icon(Icons.insert_chart, size: 26.0),

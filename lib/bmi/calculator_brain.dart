@@ -15,21 +15,21 @@ class CalculatorBrain {
 
   String getResult() {
     if (_bmi >= 25) {
-      return 'Overweight';
+      return 'Your body isOverweight';
     } else if (_bmi > 18.5) {
-      return 'Normal';
+      return 'Your body is Normal';
     } else {
-      return 'Underweight';
+      return 'Your body is Underweight';
     }
   }
 
   String getInterpretation() {
     if (_bmi >= 25) {
-      return 'You have a higher than normal body weight. Try to exercise more.';
+      return 'You have a higher than normal body weight. Try to exercise and eat more healthy.';
     } else if (_bmi >= 18.5) {
-      return 'You have a normal body weight. Good job!';
+      return 'You have a normal body weight. You should some growth muscle to have a nice body';
     } else {
-      return 'You have a lower than normal body weight. You can eat a bit more.';
+      return 'You have a lower than normal body weight. You should eat and exercise a bit more.';
     }
   }
 }

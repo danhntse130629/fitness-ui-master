@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fitness_flutter/bmi/components/card_child.dart';
 import 'package:fitness_flutter/bmi/components/reusable_card.dart';
 import 'package:fitness_flutter/bmi/constants.dart';
 import 'package:fitness_flutter/bmi/screens/result_page.dart';
@@ -30,14 +29,19 @@ class _InputPageState extends State<InputPage> {
       body: Container(
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: new AssetImage("assets/images/bg.jpg"),
+            image: new AssetImage("assets/images/bg.jpg",),
             fit: BoxFit.fill,
           ),
         ),
         child: Column(
           children: <Widget>[
 
-            SizedBox(height: 320),
+//            SizedBox(height: 320),
+              SizedBox(height: 50,),
+            Center(child: Image.asset("assets/images/start1.png",height: 230,
+              width: 230,alignment: Alignment.center,)),
+              SizedBox(height: 25,),
+
             DropdownButton(
               hint: _dropDownValue == null
                   ? Text('Gender', style: TextStyle(color: Colors.white, fontSize: 20),)
@@ -47,7 +51,7 @@ class _InputPageState extends State<InputPage> {
               ),
               isExpanded: true,
               iconSize: 50.0,
-              style: TextStyle(color: Colors.black),
+              style: kLabelTextStyle,
               items: ['Male', 'Female'].map(
                     (val) {
                   return DropdownMenuItem<String>(
@@ -125,7 +129,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            'WEIGHT',
+                            'WEIGHT(Kg)',
                             style: kLabelTextStyle,
                           ),
                           Text(

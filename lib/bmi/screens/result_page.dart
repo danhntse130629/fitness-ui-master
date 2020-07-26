@@ -26,7 +26,7 @@ class _ResultsPageState extends State<ResultsPage> {
       body: Container(
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: new AssetImage("assets/images/bg.jpg"),
+            image: new AssetImage("assets/images/start2.jpg"),
             fit: BoxFit.fill,
           ),
         ),
@@ -34,7 +34,10 @@ class _ResultsPageState extends State<ResultsPage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            SizedBox(height: 300),
+            SizedBox(height: 50,),
+            Center(child: Image.asset("assets/images/start1.png",height: 260,
+              width: 260,alignment: Alignment.center,)),
+            SizedBox(height: 13,),
             Expanded(
               flex: 5,
               child: ReusableCard(
@@ -47,7 +50,7 @@ class _ResultsPageState extends State<ResultsPage> {
                       style: kResultTextStyle,
                     ),
                     Text(
-                      widget.bmiResult,
+                      'BMI: ' + widget.bmiResult,
                       style: kBMITextStyle,
                     ),
                     Text(
@@ -57,14 +60,14 @@ class _ResultsPageState extends State<ResultsPage> {
                     ),
               DropdownButton(
                 hint: _dropDownValue == null
-                    ? Text('Diet mode', style: TextStyle(color: Colors.black, fontSize: 20),)
+                    ? Text('Choose your diet mode', style: kLabelTextStyle,)
                     : Text(
                   _dropDownValue,
                   style: TextStyle(color: Colors.black),
                 ),
                 isExpanded: true,
                 iconSize: 30.0,
-                style: TextStyle(color: Colors.black),
+                style: kLabelTextStyle,
                 items: ['Lose weight', 'Gain weight', 'Growth Muscle'].map(
                       (val) {
                     return DropdownMenuItem<String>(

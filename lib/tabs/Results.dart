@@ -9,6 +9,14 @@ class Results extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
+    final fromDate = DateTime.now();
+    final toDate = DateTime(2020, 08, 22);
+    double kg = 60;
+    final date1 = DateTime.now().subtract(Duration(days: 0));
+//    final date2 = DateTime.now().subtract(Duration(days: 3));
+
+
+
 
     return SingleChildScrollView(
       child: Container(
@@ -155,30 +163,40 @@ class Results extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 250.0,
-                      width: width - 40.0,
-                      margin: EdgeInsets.only(bottom: 30.0),
+                      color: Colors.red,
+                      height: MediaQuery.of(context).size.height / 2,
+                      width: MediaQuery.of(context).size.width,
                       child: BezierChart(
-                        bezierChartScale: BezierChartScale.CUSTOM,
-                        xAxisCustomValues: const [0, 3, 6, 9],
-                        series: const [
+                        fromDate: fromDate,
+                        bezierChartScale: BezierChartScale.WEEKLY,
+                        toDate: toDate,
+                        selectedDate: toDate,
+                        series: [
                           BezierLine(
-                            lineColor: Color.fromRGBO(241, 227, 255, 1.0),
-                            lineStrokeWidth: 8.0,
-                            data: const [
-                              DataPoint<double>(value: 45, xAxis: 0),
-                              DataPoint<double>(value: 80, xAxis: 3),
-                              DataPoint<double>(value: 55, xAxis: 6),
-                              DataPoint<double>(value: 100, xAxis: 9)
+                            label: "Kg",
+//                            onMissingValue: (dateTime) {
+//                              if (dateTime.day.isEven) {
+//                                return 10.0;
+//                              }
+//                              return 5.0;
+//                            },
+                            data: [
+                              DataPoint<DateTime>(value: 60, xAxis: date1),
+//                              DataPoint<DateTime>(value: 50, xAxis: date2),
                             ],
                           ),
                         ],
                         config: BezierChartConfig(
-                          xAxisTextStyle: TextStyle(color: Colors.blueGrey),
                           startYAxisFromNonZeroValue: true,
-                          backgroundColor: Colors.white,
+                          verticalIndicatorStrokeWidth: 3.0,
+                          verticalIndicatorColor: Colors.black26,
+                          showVerticalIndicator: true,
+                          verticalIndicatorFixedPosition: false,
+                          backgroundColor: Colors.blueGrey,
+                          footerHeight: 30.0,
                         ),
                       ),
+
                     ),
                     Container(
                       child: Row(
@@ -209,7 +227,7 @@ class Results extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        '56 Kg',
+                                        '60 Kg',
                                         style: TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.black54,
@@ -232,7 +250,7 @@ class Results extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        '13 Kg',
+                                        '0 Kg',
                                         style: TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.black54,
@@ -265,7 +283,7 @@ class Results extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  'Add +',
+                                  '65 Kg',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     color: Color.fromRGBO(190, 129, 255, 1.0),
@@ -292,24 +310,30 @@ class Results extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(25.0),
-                      width: width - 40.0,
-                      margin: EdgeInsets.only(bottom: 30.0),
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(241, 227, 255, 1.0),
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: Text(
-                        'Enter today\'s weight',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Color.fromRGBO(190, 130, 255, 1.0),
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w900,
+                    GestureDetector(
+                      child: Container(
+                        padding: EdgeInsets.all(25.0),
+                        width: width - 40.0,
+                        margin: EdgeInsets.only(bottom: 30.0),
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(241, 227, 255, 1.0),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Text(
+                          'Enter today\'s weight',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color.fromRGBO(190, 130, 255, 1.0),
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       ),
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                     ),
+
                   ],
                 ),
               ),

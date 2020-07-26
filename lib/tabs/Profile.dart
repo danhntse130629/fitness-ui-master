@@ -1,3 +1,4 @@
+import 'package:fitness_flutter/pages/dishes_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:vector_math/vector_math_64.dart' as math;
@@ -76,7 +77,7 @@ class Profile extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (_) {
-                  return ActivityDetail(
+                  return DishesDetail(
                     exercise: exercise,
                     tag: 'imageHeader$count',
                   );
@@ -159,7 +160,7 @@ class Profile extends StatelessWidget {
                               ),
                             ),
                             subtitle: Text(
-                              "Training plan",
+                              "Day 1 of 7",
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 26,
@@ -188,9 +189,9 @@ class Profile extends StatelessWidget {
                                 children: <Widget>[
                                   _IngredientProgress(
                                     ingredient: "Protein",
-                                    progress: 0.3,
+                                    progress: 0.6,
                                     progressColor: Colors.green,
-                                    leftAmount: 72,
+                                    leftAmount: 472,
                                     width: width * 0.28,
                                   ),
                                   SizedBox(
@@ -198,7 +199,7 @@ class Profile extends StatelessWidget {
                                   ),
                                   _IngredientProgress(
                                     ingredient: "Carbs",
-                                    progress: 0.2,
+                                    progress: 0.35,
                                     progressColor: Colors.red,
                                     leftAmount: 252,
                                     width: width * 0.28,
@@ -208,9 +209,9 @@ class Profile extends StatelessWidget {
                                   ),
                                   _IngredientProgress(
                                     ingredient: "Fat",
-                                    progress: 0.1,
+                                    progress: 0.47,
                                     progressColor: Colors.yellow,
-                                    leftAmount: 61,
+                                    leftAmount: 361,
                                     width: width * 0.28,
                                   ),
                                 ],
@@ -314,7 +315,7 @@ class _RadialProgress extends StatelessWidget {
             text: TextSpan(
               children: [
                 TextSpan(
-                  text: "1731",
+                  text: "6000",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w700,

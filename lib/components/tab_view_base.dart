@@ -75,30 +75,30 @@ class TabViewBase extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(219, 228, 255, 1.0),
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text(
-                    'Track my ' + this.tabName,
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      color: Color.fromRGBO(122, 158, 255, 1.0),
-                    ),
-                  ),
-                  Icon(
-                    Icons.add,
-                    size: 25.0,
-                    color: Color.fromRGBO(122, 158, 255, 1.0),
-                  )
-                ],
-              ),
-            ),
+//            Container(
+//              padding: EdgeInsets.all(20.0),
+//              decoration: BoxDecoration(
+//                color: Color.fromRGBO(219, 228, 255, 1.0),
+//                borderRadius: BorderRadius.circular(20.0),
+//              ),
+//              child: Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Text(
+//                    'Track my ' + this.tabName,
+//                    style: TextStyle(
+//                      fontSize: 16.0,
+//                      color: Color.fromRGBO(122, 158, 255, 1.0),
+//                    ),
+//                  ),
+//                  Icon(
+//                    Icons.add,
+//                    size: 25.0,
+//                    color: Color.fromRGBO(122, 158, 255, 1.0),
+//                  )
+//                ],
+//              ),
+//            ),
             Column(children: this._renderItem(size, context)),
           ],
         ),

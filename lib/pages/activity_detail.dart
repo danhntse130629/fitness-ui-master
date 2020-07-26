@@ -1,5 +1,6 @@
 import 'package:fitness_flutter/components/next_step.dart';
 import 'package:fitness_flutter/models/exercise.dart';
+import 'package:fitness_flutter/pages/activity_timer.dart';
 import 'package:flutter/material.dart';
 class ActivityDetail extends StatelessWidget {
   final String tag;
@@ -80,7 +81,7 @@ class ActivityDetail extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             Container(
-                              margin: EdgeInsets.only(right: 55.0),
+                              margin: EdgeInsets.only(right: 30.0),
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -103,7 +104,7 @@ class ActivityDetail extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(right: 55.0),
+                              margin: EdgeInsets.only(right: 30.0),
                               child: Column(
                                 mainAxisAlignment:
                                 MainAxisAlignment.spaceBetween,
@@ -560,12 +561,12 @@ class ActivityDetail extends StatelessWidget {
            ),
          ),
          onTap: () {
-//           Navigator.push(
-//             context,
-//             MaterialPageRoute(builder: (_) {
-//               return ActivityTimer();
-//             }),
-//           );
+           Navigator.push(
+             context,
+             MaterialPageRoute(builder: (_) {
+               return ActivityTimer();
+             }),
+           );
          },
        ),
     );
